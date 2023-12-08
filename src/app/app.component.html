@@ -10,6 +10,7 @@
         type='text' 
         placeholder='name'
         (input)='onInput(addMemberInput.value)'
+        [value]='newMemberName'
       />
       <button (click)='addMember()'>Add</button>
     </div>
@@ -17,5 +18,6 @@
       <input type='text' placeholder='# of teams'/>
       <button>Generate</button>
     </div>
+    <p class='error-msg'>{{ errorMessage }}</p>
   </div>
 </div>
