@@ -12,4 +12,12 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   newMemberName = ''
   members: string[] = [];
+
+  onInput(member: string) {
+    this.newMemberName = member;
+  }
+
+  addMember() {
+    this.members.push(this.newMemberName);
+  }
 }
